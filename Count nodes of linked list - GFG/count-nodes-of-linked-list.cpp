@@ -27,17 +27,16 @@ struct Node
 class Solution
 {
     public:
+    int count =0;
     //Function to count nodes of a linked list.
     int getCount(struct Node* head){
-    
-        int n=0;
-        Node* temp=head;
-        while(temp)
-        {
-            n++;
-            temp=temp->next;
-        }
-        return n;
+       Node* temp=head;
+       while(temp!=NULL)
+       {
+           count++;
+           temp=temp->next;
+       }
+       return count;
     
     }
 };
