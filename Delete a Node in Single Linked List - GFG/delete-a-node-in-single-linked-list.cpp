@@ -86,7 +86,7 @@ struct Node
 /*You are required to complete below method*/
 Node* deleteNode(Node *head,int x)
 {
-    int count=0;
+    int count=1;
     Node* t1=head;
     Node* t2=NULL;
     if(x==1)
@@ -96,13 +96,12 @@ Node* deleteNode(Node *head,int x)
     }
     else
     {
-        while(x!=count+1)
+        while(x!=count)
         {   t2=t1;
             t1=t1->next;
             count++;
         }
         t2->next=t1->next;
-        delete t1;
         return head;
     }
 }
